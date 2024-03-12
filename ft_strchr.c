@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 11:11:43 by alruiz-d          #+#    #+#             */
-/*   Updated: 2024/03/12 11:11:46 by alruiz-d         ###   ########.fr       */
+/*   Created: 2024/03/12 19:11:29 by alruiz-d          #+#    #+#             */
+/*   Updated: 2024/03/12 19:11:32 by alruiz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, void *src, size_t n)
+char	*ft_strchr(char *s, int c)
 {
-	unsigned int	i;
-	unsigned char	*ptr;
+	int	i;
 
-	ptr = dst;
 	i = 0;
-	if (dst == 0)
+	while (s[i] != '\0')
 	{
-		return (0);
-	}
-	while (i < n)
-	{
-		ptr[i] = ((unsigned char *)src)[i];
+		if (s[i] == c)
+			return (&s[i]);
 		i++;
 	}
-	return (dst);
+	return (0);
 }

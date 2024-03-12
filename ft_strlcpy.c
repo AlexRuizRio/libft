@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 11:11:43 by alruiz-d          #+#    #+#             */
-/*   Updated: 2024/03/12 11:11:46 by alruiz-d         ###   ########.fr       */
+/*   Created: 2024/03/12 15:29:14 by alruiz-d          #+#    #+#             */
+/*   Updated: 2024/03/12 15:29:17 by alruiz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, void *src, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
-	unsigned char	*ptr;
+	unsigned int	x;
 
-	ptr = dst;
 	i = 0;
-	if (dst == 0)
-	{
+	x = 0;
+	if (dstsize == 0)
 		return (0);
-	}
-	while (i < n)
+	while (src[i] != '\0' && i < dstsize - 1)
 	{
-		ptr[i] = ((unsigned char *)src)[i];
+		dst[i] = src[i];
 		i++;
 	}
-	return (dst);
+	dst[i] = '\0';
+	while (src[x] != '\0')
+		x++;
+	if (x >= i)
+	{
+		return (i);
+	}
+	else
+	{
+		return (x);
+	}
 }

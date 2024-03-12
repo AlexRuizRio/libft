@@ -1,30 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 11:11:43 by alruiz-d          #+#    #+#             */
-/*   Updated: 2024/03/12 11:11:46 by alruiz-d         ###   ########.fr       */
+/*   Created: 2024/03/12 12:50:17 by alruiz-d          #+#    #+#             */
+/*   Updated: 2024/03/12 12:50:21 by alruiz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, void *src, size_t n)
-{
-	unsigned int	i;
-	unsigned char	*ptr;
+#include <stdio.h>
+#include <string.h>
 
-	ptr = dst;
-	i = 0;
-	if (dst == 0)
-	{
+void	*ft_memmove(void *dst, void *src, size_t len)
+{
+	unsigned char	*desty;
+	unsigned char	*cpy;
+	unsigned int	i;
+
+	desty = dst;
+	cpy = src;
+	if (dst == 0 || src == 0)
 		return (0);
-	}
-	while (i < n)
+	if (cpy < desty && desty < cpy + len)
 	{
-		ptr[i] = ((unsigned char *)src)[i];
+		i = len;
+		while (i > 0)
+		{
+			desty[i - 1] = cpy[i - 1];
+			i--;
+		}
+		return (desty);
+	}
+	i = 0;
+	while (i < len)
+	{
+		desty[i] = cpy[i];
 		i++;
 	}
-	return (dst);
+	return (desty);
 }
