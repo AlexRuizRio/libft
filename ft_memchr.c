@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 15:42:22 by alruiz-d          #+#    #+#             */
-/*   Updated: 2024/03/11 15:42:25 by alruiz-d         ###   ########.fr       */
+/*   Created: 2024/03/13 09:31:08 by alruiz-d          #+#    #+#             */
+/*   Updated: 2024/03/13 09:31:10 by alruiz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	len;
+	unsigned char	*str;
+	size_t			i;
 
+	str = (unsigned char *)s;
 	i = 0;
-	j = 0;
-	len = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[len] != '\0')
-		len++;
-	if (dstsize <= i)
-		len += dstsize;
-	else
-		len += i;
-	while (src[j] != '\0' && (i + 1) < dstsize)
+	while (n--)
 	{
-		dest[i] = src[j];
+		if (str[i] == (unsigned char)c)
+			return (&str[i]);
 		i++;
-		j++;
 	}
-	dest[i] = '\0';
-	return (len);
+	return (0);
 }

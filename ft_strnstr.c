@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 15:42:22 by alruiz-d          #+#    #+#             */
-/*   Updated: 2024/03/11 15:42:25 by alruiz-d         ###   ########.fr       */
+/*   Created: 2024/03/13 15:34:48 by alruiz-d          #+#    #+#             */
+/*   Updated: 2024/03/13 15:34:50 by alruiz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	len;
+	int	i;
+	int	y;
+	int	l;
 
 	i = 0;
-	j = 0;
-	len = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[len] != '\0')
-		len++;
-	if (dstsize <= i)
-		len += dstsize;
-	else
-		len += i;
-	while (src[j] != '\0' && (i + 1) < dstsize)
+	l = ft_strlen(needle);
+	if (l == 0)
+		return (haystack);
+	while (haystack[i] != 0 && len--)
 	{
-		dest[i] = src[j];
+		y = 0;
+		while (needle[y] != 0)
+		{
+			if (haystack[i + y] != needle[y])
+				break ;
+			y++;
+		}
+		if (y == l)
+			return (haystack + i);
 		i++;
-		j++;
 	}
-	dest[i] = '\0';
-	return (len);
+	return (0);
 }
+

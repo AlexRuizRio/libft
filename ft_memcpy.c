@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+#include <string.h>
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*ptr;
