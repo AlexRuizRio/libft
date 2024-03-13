@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -24,10 +24,10 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	while (src[len] != '\0')
 		len++;
 	if (size <= i)
-		len += size;
+		len += dstsize;
 	else
 		len += i;
-	while (src[j] != '\0' && (i + 1) < size)
+	while (src[j] != '\0' && (i + 1) < dstsize)
 	{
 		dest[i] = src[j];
 		i++;
