@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 15:29:14 by alruiz-d          #+#    #+#             */
-/*   Updated: 2024/03/12 15:29:17 by alruiz-d         ###   ########.fr       */
+/*   Created: 2024/03/14 19:03:10 by alruiz-d          #+#    #+#             */
+/*   Updated: 2024/03/14 19:03:13 by alruiz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
-	unsigned int	x;
+	size_t	length;
+	char	*str;
+	size_t	i;
 
-	i = 0;
-	x = 0;
-	if (dstsize == 0)
+	length = ft_strlen(s);
+	if (!s)
 		return (0);
-	while (src[i] != '\0' && i < dstsize - 1)
+	if (start >= length)
+		return (0);
+	if (length < len + start)
+		len = length - start;
+	str = malloc(length + 1);
+	if (!str)
+		return (0);
+	while (i < len)
 	{
-		dst[i] = src[i];
+		str[i] = s[start + 1];
 		i++;
 	}
-	dst[i] = '\0';
-	while (src[x] != '\0')
-		x++;
-	if (x >= i)
-	{
-		return (i);
-	}
-	else
-	{
-		return (x);
-	}
+	return (str);
 }

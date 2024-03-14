@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 15:29:14 by alruiz-d          #+#    #+#             */
-/*   Updated: 2024/03/12 15:29:17 by alruiz-d         ###   ########.fr       */
+/*   Created: 2024/03/14 18:20:54 by alruiz-d          #+#    #+#             */
+/*   Updated: 2024/03/14 18:20:59 by alruiz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*strdup(const char *s1)
 {
-	unsigned int	i;
-	unsigned int	x;
+	char	*str;
+	size_t	len;
 
-	i = 0;
-	x = 0;
-	if (dstsize == 0)
+	len = 0;
+	while (s1[len])
+		len++;
+	str = malloc(len + 1);
+	len = 0;
+	if (str == 0)
 		return (0);
-	while (src[i] != '\0' && i < dstsize - 1)
+	while (s1[len])
 	{
-		dst[i] = src[i];
-		i++;
+		str[len] = s1[len];
+		len++;
 	}
-	dst[i] = '\0';
-	while (src[x] != '\0')
-		x++;
-	if (x >= i)
-	{
-		return (i);
-	}
-	else
-	{
-		return (x);
-	}
+	str[len] = '\0';
+	return (str);
 }

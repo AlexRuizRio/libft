@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 15:29:14 by alruiz-d          #+#    #+#             */
-/*   Updated: 2024/03/12 15:29:17 by alruiz-d         ###   ########.fr       */
+/*   Created: 2024/03/14 17:00:23 by alruiz-d          #+#    #+#             */
+/*   Updated: 2024/03/14 17:38:41 by alruiz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned int	i;
-	unsigned int	x;
+	unsigned char	*str;
+	size_t			i;
+	size_t			len;
 
+	len = count * size;
+	str = malloc(len);
 	i = 0;
-	x = 0;
-	if (dstsize == 0)
+	if (str == 0)
 		return (0);
-	while (src[i] != '\0' && i < dstsize - 1)
+	while (len--)
 	{
-		dst[i] = src[i];
+		str[i] = '\0';
 		i++;
 	}
-	dst[i] = '\0';
-	while (src[x] != '\0')
-		x++;
-	if (x >= i)
-	{
-		return (i);
-	}
-	else
-	{
-		return (x);
-	}
+	return (str);
 }
