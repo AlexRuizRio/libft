@@ -26,6 +26,6 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (x != -1)
-		return (&s[x]);
+		return ((char *)&s[x]);
 	return (0);
 }
