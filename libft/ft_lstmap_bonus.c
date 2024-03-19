@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/18 21:03:42 by alruiz-d          #+#    #+#             */
-/*   Updated: 2024/03/18 21:04:00 by alruiz-d         ###   ########.fr       */
+/*   Created: 2024/03/19 13:26:34 by alruiz-d          #+#    #+#             */
+/*   Updated: 2024/03/19 13:27:46 by alruiz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	t_list	*lstnew;
+	t_list	*tem;
+
+	while(*lst)
+	{
+		f(lst->content);
+		lstnew = ft_lstnew(lst->content);
+		lstnew->next = lst->next
+		tem = lst;
+		del(tem->content);
+		free(tem); 
+	}
+		return (lstnew);	
 }
