@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*node;
 
 	lstnew = 0;
-	while(lst)
+	while (lst)
 	{
 		node = ft_lstnew(lst->content);
 		if (!node)
@@ -30,5 +30,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&lstnew, node);
 		lst = lst->next;
 	}
-		return (lstnew);	
+	return (lstnew);
 }
