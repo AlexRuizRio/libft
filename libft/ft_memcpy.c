@@ -19,10 +19,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	ptr = dst;
 	i = 0;
-	if (dst == 0)
-	{
+	if (!dst && !src)
 		return (0);
-	}
 	while (i < n)
 	{
 		ptr[i] = ((unsigned char *)src)[i];

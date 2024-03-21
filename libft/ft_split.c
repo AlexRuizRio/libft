@@ -37,7 +37,7 @@ char	**ft_split(char const *s, char c)
 	size_t	wlen;
 	int		i;
 
-	lst = (char **)malloc(ft_wordcount(s, c) + 1);
+	lst = (char **)malloc((ft_wordcount(s, c) + 1) * sizeof(char *));
 	if (!s || !lst)
 		return (0);
 	i = 0;
@@ -48,9 +48,9 @@ char	**ft_split(char const *s, char c)
 		if (*s)
 		{
 			if (!ft_strchr(s, c))
-				wlen = strlen(s);
+				wlen = ft_strlen(s);
 			else
-				wlen = strchr(s, c) - s;
+				wlen = ft_strchr(s, c) - s;
 			lst[i++] = ft_substr(s, 0, wlen);
 			s += wlen;
 		}
