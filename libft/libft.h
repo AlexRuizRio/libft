@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alruiz-d <alruiz-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 16:37:12 by alruiz-d          #+#    #+#             */
 /*   Updated: 2024/03/14 16:37:16 by alruiz-d         ###   ########.fr       */

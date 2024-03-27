@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alruiz-d <alruiz-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 15:42:22 by alruiz-d          #+#    #+#             */
 /*   Updated: 2024/03/11 15:42:25 by alruiz-d         ###   ########.fr       */

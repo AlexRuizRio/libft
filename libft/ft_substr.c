@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alruiz-d <alruiz-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 19:03:10 by alruiz-d          #+#    #+#             */
 /*   Updated: 2024/03/14 19:03:13 by alruiz-d         ###   ########.fr       */
@@ -18,14 +18,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 	size_t	i;
 
-	length = ft_strlen(s);
 	if (!s)
 		return (0);
+	length = ft_strlen(s);
 	if (start >= length)
 		return (ft_strdup(""));
 	if (length < len + start)
 		len = length - start;
-	str = ft_calloc(len + 1, 1);
+	str = ft_calloc(len + 1, sizeof(char));
 	if (!str)
 		return (0);
 	i = 0;

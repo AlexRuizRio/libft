@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alruiz-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alruiz-d <alruiz-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 11:07:36 by alruiz-d          #+#    #+#             */
 /*   Updated: 2024/03/15 11:07:38 by alruiz-d         ###   ########.fr       */
@@ -20,7 +20,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	if (!s1 || !set)
-		return (0);
+		return (NULL);
 	start = 0;
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
