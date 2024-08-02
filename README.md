@@ -30,97 +30,119 @@ A continuación se presenta un índice de cada función reimplementada con una b
 - **ft_isalpha**: Comprueba si el carácter es una letra del alfabeto.
   - **Prototipo**: `int ft_isalpha(int c);`
   - **Descripción**: Comprueba si el carácter `c` es una letra del alfabeto (mayúscula o minúscula).
+  - [Ver código](src/ft_isalpha.c)
 
 - **ft_isdigit**: Comprueba si el carácter es un dígito.
   - **Prototipo**: `int ft_isdigit(int c);`
   - **Descripción**: Comprueba si el carácter `c` es un dígito (0-9).
+  - [Ver código](src/ft_isdigit.c)
 
 - **ft_isalnum**: Comprueba si el carácter es alfanumérico.
   - **Prototipo**: `int ft_isalnum(int c);`
   - **Descripción**: Comprueba si el carácter `c` es alfanumérico (letra o dígito).
+  - [Ver código](src/ft_isalnum.c)
 
 - **ft_isascii**: Comprueba si el carácter pertenece a la tabla ASCII.
   - **Prototipo**: `int ft_isascii(int c);`
   - **Descripción**: Comprueba si el carácter `c` pertenece al conjunto de caracteres ASCII.
+  - [Ver código](src/ft_isascii.c)
 
 - **ft_isprint**: Comprueba si el carácter es imprimible.
   - **Prototipo**: `int ft_isprint(int c);`
   - **Descripción**: Comprueba si el carácter `c` es imprimible (incluyendo el espacio).
+  - [Ver código](src/ft_isprint.c)
 
 - **ft_strlen**: Calcula la longitud de una cadena de caracteres.
   - **Prototipo**: `size_t ft_strlen(const char *s);`
   - **Descripción**: Devuelve la longitud de la cadena `s`.
+  - [Ver código](src/ft_strlen.c)
 
 - **ft_memset**: Llena un bloque de memoria con un valor específico.
   - **Prototipo**: `void *ft_memset(void *b, int c, size_t len);`
   - **Descripción**: Llena los primeros `len` bytes del área de memoria apuntada por `b` con el valor `c`.
+  - [Ver código](src/ft_memset.c)
 
 - **ft_bzero**: Establece un bloque de memoria a cero.
   - **Prototipo**: `void ft_bzero(void *s, size_t n);`
   - **Descripción**: Establece los primeros `n` bytes del área de memoria apuntada por `s` a cero.
+  - [Ver código](src/ft_bzero.c)
 
 - **ft_memcpy**: Copia un bloque de memoria a otro.
   - **Prototipo**: `void *ft_memcpy(void *dst, const void *src, size_t n);`
   - **Descripción**: Copia `n` bytes del área de memoria `src` al área de memoria `dst`.
+  - [Ver código](src/ft_memcpy.c)
 
 - **ft_memmove**: Mueve un bloque de memoria a otro, manejando superposiciones correctamente.
   - **Prototipo**: `void *ft_memmove(void *dst, const void *src, size_t len);`
   - **Descripción**: Mueve `len` bytes del área de memoria `src` al área de memoria `dst`, manejando correctamente las superposiciones.
+  - [Ver código](src/ft_memmove.c)
 
 - **ft_strlcpy**: Copia una cadena a otra con tamaño máximo especificado.
   - **Prototipo**: `size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);`
   - **Descripción**: Copia hasta `dstsize - 1` caracteres de la cadena `src` a `dst`, garantizando la terminación nula.
+  - [Ver código](src/ft_strlcpy.c)
 
 - **ft_strlcat**: Concatenar dos cadenas con tamaño máximo especificado.
   - **Prototipo**: `size_t ft_strlcat(char *dst, const char *src, size_t dstsize);`
   - **Descripción**: Añade la cadena `src` al final de `dst` hasta `dstsize - 1` caracteres, garantizando la terminación nula.
+  - [Ver código](src/ft_strlcat.c)
 
 - **ft_toupper**: Convierte un carácter a mayúscula.
   - **Prototipo**: `int ft_toupper(int c);`
   - **Descripción**: Convierte el carácter `c` a su equivalente en mayúscula si es una letra minúscula.
+  - [Ver código](src/ft_toupper.c)
 
 - **ft_tolower**: Convierte un carácter a minúscula.
   - **Prototipo**: `int ft_tolower(int c);`
   - **Descripción**: Convierte el carácter `c` a su equivalente en minúscula si es una letra mayúscula.
+  - [Ver código](src/ft_tolower.c)
 
 - **ft_strchr**: Localiza la primera aparición de un carácter en una cadena.
   - **Prototipo**: `char *ft_strchr(const char *s, int c);`
   - **Descripción**: Devuelve un puntero a la primera aparición del carácter `c` en la cadena `s`.
+  - [Ver código](src/ft_strchr.c)
 
 - **ft_strrchr**: Localiza la última aparición de un carácter en una cadena.
   - **Prototipo**: `char *ft_strrchr(const char *s, int c);`
   - **Descripción**: Devuelve un puntero a la última aparición del carácter `c` en la cadena `s`.
+  - [Ver código](src/ft_strrchr.c)
 
 - **ft_strncmp**: Compara dos cadenas hasta un número determinado de caracteres.
   - **Prototipo**: `int ft_strncmp(const char *s1, const char *s2, size_t n);`
   - **Descripción**: Compara hasta `n` caracteres de las cadenas `s1` y `s2`.
+  - [Ver código](src/ft_strncmp.c)
 
 - **ft_memchr**: Busca un carácter en un bloque de memoria.
   - **Prototipo**: `void *ft_memchr(const void *s, int c, size_t n);`
   - **Descripción**: Busca el carácter `c` en los primeros `n` bytes del bloque de memoria apuntado por `s`.
+  - [Ver código](src/ft_memchr.c)
 
 - **ft_memcmp**: Compara dos bloques de memoria.
   - **Prototipo**: `int ft_memcmp(const void *s1, const void *s2, size_t n);`
   - **Descripción**: Compara los primeros `n` bytes de los bloques de memoria `s1` y `s2`.
+  - [Ver código](src/ft_memcmp.c)
 
 - **ft_strnstr**: Localiza una subcadena dentro de una cadena, hasta un número determinado de caracteres.
   - **Prototipo**: `char *ft_strnstr(const char *haystack, const char *needle, size_t len);`
   - **Descripción**: Localiza la primera aparición de la subcadena `needle` en `haystack`, buscando como máximo `len` caracteres.
+  - [Ver código](src/ft_strnstr.c)
 
 - **ft_atoi**: Convierte una cadena a un número entero.
   - **Prototipo**: `int ft_atoi(const char *str);`
   - **Descripción**: Convierte la cadena `str` a un número entero.
+  - [Ver código](src/ft_atoi.c)
 
 ### Funciones con `malloc()`
 
 - **ft_calloc**: Asigna memoria para una matriz, inicializando todos sus bytes a cero.
   - **Prototipo**: `void *ft_calloc(size_t count, size_t size);`
   - **Descripción**: Asigna memoria para una matriz de `count` elementos de `size` bytes cada uno, inicializando todos los bytes a cero.
+  - [Ver código](src/ft_calloc.c)
 
 - **ft_strdup**: Duplica una cadena de caracteres.
   - **Prototipo**: `char *ft_strdup(const char *s1);`
   - **Descripción**: Duplica la cadena `s1` reservando memoria con `malloc`.
-
+  - [Ver código](src/ft_strdup.c)
 ### Funciones adicionales
 
 - **ft_substr**: Crea una subcadena a partir de una cadena dada.
