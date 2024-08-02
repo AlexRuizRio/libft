@@ -30,7 +30,7 @@ A continuación se presenta un índice de cada función reimplementada con una b
 - **ft_isalpha**: Comprueba si el carácter es una letra del alfabeto.
   - **Prototipo**: `int ft_isalpha(int c);`
   - **Descripción**: Comprueba si el carácter `c` es una letra del alfabeto (mayúscula o minúscula).
-  - [Ver código](src/ft_isalpha.c)
+  - [Ver código](/ft_isalpha.c)
 
 - **ft_isdigit**: Comprueba si el carácter es un dígito.
   - **Prototipo**: `int ft_isdigit(int c);`
@@ -40,7 +40,7 @@ A continuación se presenta un índice de cada función reimplementada con una b
 - **ft_isalnum**: Comprueba si el carácter es alfanumérico.
   - **Prototipo**: `int ft_isalnum(int c);`
   - **Descripción**: Comprueba si el carácter `c` es alfanumérico (letra o dígito).
-  - [Ver código](src/ft_isalnum.c)
+  - [Ver código](ft_isalnum.c)
 
 - **ft_isascii**: Comprueba si el carácter pertenece a la tabla ASCII.
   - **Prototipo**: `int ft_isascii(int c);`
