@@ -27,10 +27,9 @@ A continuación se presenta un índice de cada función reimplementada con una b
 
 ### Funciones sin `malloc()`
 
-- **ft_isalpha**: Comprueba si el carácter es una letra del alfabeto.
+- [**ft_isalpha**](/ft_isalpha.c): Comprueba si el carácter es una letra del alfabeto.
   - **Prototipo**: `int ft_isalpha(int c);`
   - **Descripción**: Comprueba si el carácter `c` es una letra del alfabeto (mayúscula o minúscula).
-  - [Ver código](/ft_isalpha.c)
 
 - **ft_isdigit**: Comprueba si el carácter es un dígito.
   - **Prototipo**: `int ft_isdigit(int c);`
