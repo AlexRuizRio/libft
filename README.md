@@ -182,10 +182,6 @@ struct s_list *next;
 } t_list;
 ```
 
-- [**ft_putnbr_fd**](/ft_putnbr_fd.c): Escribe un número entero en un descriptor de archivo.
-  - **Prototipo**: `void ft_putnbr_fd(int n, int fd);`
-  - **Descripción**: Escribe el número entero `n` en el descriptor de archivo `fd`.
-
 - [**ft_lstnew**](/ft_lstnew.c): Crea un nuevo nodo con un contenido dado.
   - **Prototipo**: `t_list *ft_lstnew(void *content);`
   - **Descripción**: Crea un nuevo nodo utilizando `malloc(3)`. La variable miembro `content` se inicializa con el contenido del parámetro `content`. La variable `next` se inicializa con `NULL`.
