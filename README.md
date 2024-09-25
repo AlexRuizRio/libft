@@ -186,35 +186,35 @@ struct s_list *next;
   - **Prototipo**: `t_list *ft_lstnew(void *content);`
   - **Descripción**: Crea un nuevo nodo utilizando `malloc(3)`. La variable miembro `content` se inicializa con el contenido del parámetro `content`. La variable `next` se inicializa con `NULL`.
 
-- [**ft_lstadd_front**](/ft_lstadd_front.c): Añade un nodo al principio de la lista.
+- [**ft_lstadd_front**](/ft_lstadd_front_bonus.c): Añade un nodo al principio de la lista.
   - **Prototipo**: `void ft_lstadd_front(t_list **lst, t_list *new);`
   - **Descripción**: Añade el nodo `new` al principio de la lista `lst`.
 
-- [**ft_lstsize**](/ft_lstsize.c): Cuenta el número de nodos en una lista.
+- [**ft_lstsize**](/ft_lstsize_bonus.c): Cuenta el número de nodos en una lista.
   - **Prototipo**: `int ft_lstsize(t_list *lst);`
   - **Descripción**: Cuenta el número de nodos de una lista.
 
-- [**ft_lstlast**](/ft_lstlast.c): Devuelve el último nodo de la lista.
+- [**ft_lstlast**](/ft_lstlast_bonus.c): Devuelve el último nodo de la lista.
   - **Prototipo**: `t_list *ft_lstlast(t_list *lst);`
   - **Descripción**: Devuelve el último nodo de la lista.
 
-- [**ft_lstadd_back**](/ft_lstadd_back.c): Añade un nodo al final de la lista.
+- [**ft_lstadd_back**](/ft_lstadd_back_bonus.c): Añade un nodo al final de la lista.
   - **Prototipo**: `void ft_lstadd_back(t_list **lst, t_list *new);`
   - **Descripción**: Añade el nodo `new` al final de la lista `lst`.
 
-- [**ft_lstdelone**](/ft_lstdelone.c): Elimina y libera un nodo de la lista.
+- [**ft_lstdelone**](/ft_lstdelone_bonus.c): Elimina y libera un nodo de la lista.
   - **Prototipo**: `void ft_lstdelone(t_list *lst, void (*del)(void *));`
   - **Descripción**: Toma como parámetro un nodo `lst` y libera la memoria del contenido utilizando la función `del` dada como parámetro, además de liberar el nodo. La memoria de `next` no debe liberarse.
 
-- [**ft_lstclear**](/ft_lstclear.c): Elimina y libera todos los nodos de una lista.
+- [**ft_lstclear**](/ft_lstclear_bonus.c): Elimina y libera todos los nodos de una lista.
   - **Prototipo**: `void ft_lstclear(t_list **lst, void (*del)(void *));`
   - **Descripción**: Elimina y libera el nodo `lst` dado y todos los consecutivos de ese nodo, utilizando la función `del` y `free(3)`. Al final, el puntero a la lista debe ser `NULL`.
 
-- [**ft_lstiter**](/ft_lstiter.c): Aplica una función a cada nodo de una lista.
+- [**ft_lstiter**](/ft_lstiter_bonus.c): Aplica una función a cada nodo de una lista.
   - **Prototipo**: `void ft_lstiter(t_list *lst, void (*f)(void *));`
   - **Descripción**: Itera la lista `lst` y aplica la función `f` en el contenido de cada nodo.
 
-- [**ft_lstmap**](/ft_lstmap.c): Crea una nueva lista aplicando una función a cada nodo de la lista original.
+- [**ft_lstmap**](/ft_lstmap_bonus.c): Crea una nueva lista aplicando una función a cada nodo de la lista original.
   - **Prototipo**: `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));`
   - **Descripción**: Itera la lista `lst` y aplica la función `f` al contenido de cada nodo. Crea una lista resultante de la aplicación correcta y sucesiva de la función `f` sobre cada nodo. La función `del` se utiliza para eliminar el contenido de un nodo, si hace falta.
 
