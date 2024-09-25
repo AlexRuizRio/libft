@@ -182,7 +182,7 @@ struct s_list *next;
 } t_list;
 ```
 
-- [**ft_lstnew**](/ft_lstnew.c): Crea un nuevo nodo con un contenido dado.
+- [**ft_lstnew**](/ft_lstnew_bonus.c): Crea un nuevo nodo con un contenido dado.
   - **Prototipo**: `t_list *ft_lstnew(void *content);`
   - **Descripción**: Crea un nuevo nodo utilizando `malloc(3)`. La variable miembro `content` se inicializa con el contenido del parámetro `content`. La variable `next` se inicializa con `NULL`.
 
